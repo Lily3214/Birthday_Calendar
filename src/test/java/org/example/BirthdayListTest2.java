@@ -35,7 +35,7 @@ public class BirthdayListTest2 {
         // Calculate the date for the previous Sunday
         LocalDate startOfPreviousWeek = previousSunday.minusWeeks(1);
 
-        // Print out the Result using the StringBuilder
+        // Store actual output of the test. String builder will collect date range information of the for loop
         StringBuilder actualOutput = new StringBuilder();
 
         for (BirthdayDate birthdayDate : birthdayDates) {
