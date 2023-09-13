@@ -1,6 +1,5 @@
 package org.example;
 
-import org.example.BirthdayDate;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -33,7 +32,7 @@ public class BirthdayListTest {
         // Calculate the date for the previous Sunday
         LocalDate startOfPreviousWeek = previousSunday.minusWeeks(1);
 
-        System.out.println("Birthday List for the Previous Week from Saturday to Sunday:");
+        System.out.println("Birthday List for the Previous Week from Sunday to Saturday:");
         DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M/d/yyyy");
 
         for (BirthdayDate birthdayDate : birthdayDates) {

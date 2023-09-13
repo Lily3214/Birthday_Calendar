@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BirthdayList {
-    private static final List<BirthdayDate> birthdayDates = new ArrayList<>();
+    static final List<BirthdayDate> birthdayDates = new ArrayList<>();
     private static final String FILE_NAME = "Birthday.csv";
     private static final String DATE_FORMAT = "M/d/yyyy";
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_FORMAT);
@@ -75,7 +75,7 @@ public class BirthdayList {
         }
     }
 
-    private static void printPreviousWeekBirthdayLists() {
+    public static void printPreviousWeekBirthdayLists() {
         LocalDate currentDate = LocalDate.now();
         // Calculate the date for the most recent Sunday
         LocalDate previousSunday = currentDate.minusDays(currentDate.getDayOfWeek().getValue());

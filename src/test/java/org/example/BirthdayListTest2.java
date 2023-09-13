@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BirthdayListTest2 {
     @Test
-    public void testPrintPreviousWeekBirthdayListsFromSundayToSaturday() {
+    public void print_previousWeekBirthdayLists_fromSundayToSaturday() {
         // Arrange
         List<BirthdayDate> birthdayDates = new ArrayList<>();
         birthdayDates.add(new BirthdayDate(1, "Emzbebh bhe (nu)", LocalDate.of(2023, 8, 1), 32));
@@ -25,6 +25,7 @@ public class BirthdayListTest2 {
 
         // Act
         LocalDate currentDate = LocalDate.of(2023, 9, 13);
+
         // Calculate the date for the most recent Sunday
         LocalDate previousSunday = currentDate.minusDays(currentDate.getDayOfWeek().getValue());
 
@@ -34,7 +35,7 @@ public class BirthdayListTest2 {
         // Calculate the date for the previous Sunday
         LocalDate startOfPreviousWeek = previousSunday.minusWeeks(1);
 
-        // Create a StringBuilder to capture the printed output
+        // Print out the Result using the StringBuilder
         StringBuilder actualOutput = new StringBuilder();
 
         for (BirthdayDate birthdayDate : birthdayDates) {
